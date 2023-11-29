@@ -1,6 +1,6 @@
 <h2>Reading data in pandas</h2>
 <div class="step-text">
-<p>Reading data is one of the first steps in any machine-learning pipeline. In this topic, we will learn how properly read different types of data in Pandas.</p>
+<p>Reading data is one of the first steps in any machine learning pipeline. In this topic, we will learn how to properly read different types of data in Pandas.</p>
 <h5 id="type-of-data-to-read-excel-csv-json-sql"> Type of data to read: excel, csv, json, sql</h5>
 <p>In Pandas, you can read different types of data from various sources, such as Excel files, CSV files, JSON files, and SQL databases. To read files of different types, you need to add the file extension to the read function. For example, to read csv files, you should add <code class="language-python">csv</code> to <code class="language-python">read_</code>: <code class="language-python">pandas.read_csv()</code> and so on. All of the files will be loaded as DataFrames.</p>
 <pre><code class="language-python">import pandas as pd
@@ -105,7 +105,7 @@ min    22000.000000
 max    60000.000000</code></pre>
 </li>
 </ul>
-<h5 id="data-file-options-sep-delimiter-header-index_col-header">Data file options: sep (delimiter), header, index_col, header</h5>
+<h5 id="data-file-options-sep-delimiter-header-index_col">Data file options: sep (delimiter), header, index_col</h5>
 <p>Using all of the data types, you can specify the way to read them with such parameters as <code class="language-python">sep</code>, <code class="language-python">header</code> and <code class="language-python">index_col</code> . Let's download a csv file with information about different cars. <a href="https://cogniterra.org/media/attachments/lesson/30081/cars.csv" rel="noopener noreferrer nofollow" target="_blank">The link to the file</a>.  </p>
 <pre><code class="language-python">df_cars = pd.read_csv('./cars.csv')
 </code></pre>
@@ -140,7 +140,7 @@ Honda Civic     22000      Used  2021  Gasoline</code></pre>
 </li>
 </ul>
 <h5 id="polars-library-to-read-data">Polars library to read data</h5>
-<p>In our previous example, we used the Pandas library, however, it can be inefficient to work with large files. One alternative is Polars. Polars is a fast and efficient DataFrame library for data manipulation, similar to Pandas. It can handle large datasets with excellent performance. All of the functions and methods are very similar to Pandas. First, you should install Polars library. </p>
+<p>In our previous example, we used the Pandas library, however, it can be inefficient to work with large files. One alternative is Polars. Polars is a fast and efficient DataFrame library for data manipulation, similar to Pandas. It can handle large datasets with excellent performance. All of the functions and methods are very similar to Pandas. First, you should install the Polars library. </p>
 <pre><code class="language-bash">pip install polars</code></pre>
 <pre><code class="language-python">df_cars = pl.read_csv('./cars.csv')</code></pre>
 <p>Note that you will see also the type of data of each column when displaying the DataFrame. </p>
